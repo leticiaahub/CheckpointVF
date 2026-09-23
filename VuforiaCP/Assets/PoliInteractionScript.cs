@@ -4,24 +4,24 @@ using System.Collections;
 public class PoliInteractionScript : MonoBehaviour
 
 {
-    [Header("Pontos de Referência")]
+   
     public Transform waterTargetPosition;
     public Transform islandCenter;
 
-    [Header("Configurações")]
+   
     public float jumpDuration = 1.0f;
     public float jumpHeight = 2.0f;
     public float swimRadius = 4.0f;
     public float swimSpeed = 50.0f;
 
-    // 1. PRIMEIRO VOID (vincular no On Target Found)
+    
     public void PularNaAgua()
     {
         StopAllCoroutines();
         StartCoroutine(JumpToWaterRoutine());
     }
 
-    // 2. SEGUNDO VOID (vincular no On Target Lost)
+   
     public void IniciarNadando()
     {
         StopAllCoroutines();
